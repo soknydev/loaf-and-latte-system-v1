@@ -99,7 +99,7 @@
             buttonComponent11.FlatStyle = FlatStyle.Flat;
             buttonComponent11.Font = new Font("Segoe UI Semibold", 12F);
             buttonComponent11.ForeColor = Color.White;
-            buttonComponent11.Location = new Point(693, 516);
+            buttonComponent11.Location = new Point(901, 516);
             buttonComponent11.Name = "buttonComponent11";
             buttonComponent11.Padding = new Padding(15, 8, 15, 8);
             buttonComponent11.Size = new Size(142, 60);
@@ -137,7 +137,7 @@
             txtPassword.Name = "txtPassword";
             txtPassword.Size = new Size(300, 34);
             txtPassword.TabIndex = 5;
-            txtPassword.Text = "S123s123";
+            txtPassword.Text = "adminpass123";
             // 
             // label3
             // 
@@ -156,7 +156,7 @@
             txtUsername.Name = "txtUsername";
             txtUsername.Size = new Size(300, 34);
             txtUsername.TabIndex = 3;
-            txtUsername.Text = "seyha2029";
+            txtUsername.Text = "admin";
             txtUsername.TextChanged += txtUsername_TextChanged;
             // 
             // label2
@@ -183,10 +183,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.Tablet_login;
+            pictureBox1.Image = Properties.Resources.ChatGPT_Image_May_1__2025__04_48_15_PM1;
             pictureBox1.Location = new Point(65, 144);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(452, 432);
+            pictureBox1.Size = new Size(530, 432);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;

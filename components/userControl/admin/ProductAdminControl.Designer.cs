@@ -35,15 +35,18 @@
             lblProductName = new Label();
             btnAddToCart = new ButtonComponent1();
             lblProductPrice = new Label();
+            labeltttt = new Label();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)btnDelete).BeginInit();
             ((System.ComponentModel.ISupportInitialize)btnUpdate).BeginInit();
             ((System.ComponentModel.ISupportInitialize)ptImage).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnDelete
             // 
-            btnDelete.Image = (Image)resources.GetObject("btnDelete.Image");
-            btnDelete.Location = new Point(346, 290);
+            btnDelete.Image = Properties.Resources.trash;
+            btnDelete.Location = new Point(279, 351);
             btnDelete.Name = "btnDelete";
             btnDelete.Size = new Size(49, 37);
             btnDelete.SizeMode = PictureBoxSizeMode.Zoom;
@@ -54,7 +57,7 @@
             // btnUpdate
             // 
             btnUpdate.Image = (Image)resources.GetObject("btnUpdate.Image");
-            btnUpdate.Location = new Point(268, 290);
+            btnUpdate.Location = new Point(218, 352);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(49, 37);
             btnUpdate.SizeMode = PictureBoxSizeMode.Zoom;
@@ -64,9 +67,10 @@
             // 
             // ptImage
             // 
-            ptImage.Location = new Point(26, 55);
+            ptImage.Image = Properties.Resources.bakery1;
+            ptImage.Location = new Point(0, -10);
             ptImage.Name = "ptImage";
-            ptImage.Size = new Size(369, 229);
+            ptImage.Size = new Size(346, 246);
             ptImage.SizeMode = PictureBoxSizeMode.Zoom;
             ptImage.TabIndex = 13;
             ptImage.TabStop = false;
@@ -76,11 +80,12 @@
             // 
             lblProductName.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             lblProductName.AutoSize = true;
-            lblProductName.Font = new Font("Segoe UI Semibold", 16F, FontStyle.Bold);
+            lblProductName.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblProductName.ForeColor = Color.FromArgb(255, 101, 0);
-            lblProductName.Location = new Point(26, 12);
+            lblProductName.Location = new Point(45, 9);
+            lblProductName.Margin = new Padding(10);
             lblProductName.Name = "lblProductName";
-            lblProductName.Size = new Size(86, 37);
+            lblProductName.Size = new Size(63, 28);
             lblProductName.TabIndex = 11;
             lblProductName.Text = "label1";
             // 
@@ -95,10 +100,10 @@
             btnAddToCart.FlatStyle = FlatStyle.Flat;
             btnAddToCart.Font = new Font("Segoe UI Semibold", 12F);
             btnAddToCart.ForeColor = Color.White;
-            btnAddToCart.Location = new Point(26, 330);
+            btnAddToCart.Location = new Point(18, 340);
             btnAddToCart.Name = "btnAddToCart";
             btnAddToCart.Padding = new Padding(15, 8, 15, 8);
-            btnAddToCart.Size = new Size(188, 50);
+            btnAddToCart.Size = new Size(167, 52);
             btnAddToCart.TabIndex = 16;
             btnAddToCart.Text = "Add to cart";
             btnAddToCart.TextColor = Color.White;
@@ -108,32 +113,56 @@
             // lblProductPrice
             // 
             lblProductPrice.AutoSize = true;
-            lblProductPrice.ForeColor = Color.FromArgb(255, 128, 0);
-            lblProductPrice.Location = new Point(26, 290);
+            lblProductPrice.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblProductPrice.ForeColor = Color.Blue;
+            lblProductPrice.Location = new Point(131, 288);
             lblProductPrice.Name = "lblProductPrice";
-            lblProductPrice.Size = new Size(41, 20);
+            lblProductPrice.Size = new Size(54, 28);
             lblProductPrice.TabIndex = 17;
             lblProductPrice.Text = "Price";
             lblProductPrice.Click += label1_Click;
+            // 
+            // labeltttt
+            // 
+            labeltttt.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            labeltttt.AutoSize = true;
+            labeltttt.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labeltttt.ForeColor = Color.FromArgb(255, 101, 0);
+            labeltttt.Location = new Point(131, 0);
+            labeltttt.Margin = new Padding(10);
+            labeltttt.Name = "labeltttt";
+            labeltttt.Size = new Size(0, 28);
+            labeltttt.TabIndex = 18;
+            // 
+            // panel1
+            // 
+            panel1.Controls.Add(lblProductName);
+            panel1.Location = new Point(3, 239);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(337, 47);
+            panel1.TabIndex = 19;
             // 
             // ProductAdminControl
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLight;
+            Controls.Add(panel1);
+            Controls.Add(labeltttt);
             Controls.Add(lblProductPrice);
             Controls.Add(btnAddToCart);
             Controls.Add(btnDelete);
             Controls.Add(btnUpdate);
             Controls.Add(ptImage);
-            Controls.Add(lblProductName);
             Margin = new Padding(10);
             Name = "ProductAdminControl";
-            Size = new Size(414, 420);
+            Size = new Size(343, 416);
             Load += ProductAdminControl_Load;
             ((System.ComponentModel.ISupportInitialize)btnDelete).EndInit();
             ((System.ComponentModel.ISupportInitialize)btnUpdate).EndInit();
             ((System.ComponentModel.ISupportInitialize)ptImage).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -146,6 +175,7 @@
         private Label lblProductPrice;
         private Label lblProductName;
         private ButtonComponent1 btnAddToCart;
-     
+        private Label labeltttt;
+        private Panel panel1;
     }
 }

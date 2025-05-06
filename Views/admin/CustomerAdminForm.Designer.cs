@@ -60,10 +60,10 @@
             btnCustomers = new bakery_management_system.components.ButtonSidebar();
             btnCategories = new bakery_management_system.components.ButtonSidebar1();
             btnProdcuts = new bakery_management_system.components.ButtonSidebar1();
-            pbLogo = new PictureBox();
             panel1 = new Panel();
             panel3 = new Panel();
             logoutButton1 = new bakery_management_system.components.LogoutButton();
+            pbLogo = new PictureBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
             tableLayoutPanel5.SuspendLayout();
@@ -79,9 +79,9 @@
             ((System.ComponentModel.ISupportInitialize)pbProfile).BeginInit();
             tableLayoutPanel2.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbLogo).BeginInit();
             SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -376,6 +376,7 @@
             // 
             // panel2
             // 
+            panel2.Controls.Add(pbLogo);
             panel2.Controls.Add(btnReports);
             panel2.Controls.Add(btnEmployees);
             panel2.Controls.Add(btnPayments);
@@ -383,7 +384,6 @@
             panel2.Controls.Add(btnCustomers);
             panel2.Controls.Add(btnCategories);
             panel2.Controls.Add(btnProdcuts);
-            panel2.Controls.Add(pbLogo);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(0);
@@ -543,16 +543,6 @@
             btnProdcuts.UseVisualStyleBackColor = false;
             btnProdcuts.Click += btnProducts_Click;
             // 
-            // pbLogo
-            // 
-            pbLogo.Image = Properties.Resources.bms;
-            pbLogo.Location = new Point(19, 4);
-            pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(109, 109);
-            pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
-            pbLogo.TabIndex = 0;
-            pbLogo.TabStop = false;
-            // 
             // panel1
             // 
             panel1.Controls.Add(panel3);
@@ -592,6 +582,16 @@
             logoutButton1.UseVisualStyleBackColor = false;
             logoutButton1.Click += logoutButton1_Click;
             // 
+            // pbLogo
+            // 
+            pbLogo.Image = Properties.Resources.ChatGPT_Image_May_1__2025__04_48_15_PM;
+            pbLogo.Location = new Point(30, -4);
+            pbLogo.Name = "pbLogo";
+            pbLogo.Size = new Size(140, 134);
+            pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pbLogo.TabIndex = 11;
+            pbLogo.TabStop = false;
+            // 
             // CustomerAdminForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -617,9 +617,9 @@
             ((System.ComponentModel.ISupportInitialize)pbProfile).EndInit();
             tableLayoutPanel2.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbLogo).EndInit();
             ResumeLayout(false);
         }
 
@@ -644,7 +644,6 @@
         private components.ButtonSidebar btnCustomers;
         private components.ButtonSidebar1 btnCategories;
         private components.ButtonSidebar1 btnProdcuts;
-        private PictureBox pbLogo;
         private Panel panel1;
         private Panel panel3;
         private components.LogoutButton logoutButton1;
@@ -661,5 +660,6 @@
         private Label label1;
         private Panel panel11;
         private components.ButtonComponent1 btnAddCustomer;
+        private PictureBox pbLogo;
     }
 }

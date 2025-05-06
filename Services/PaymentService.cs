@@ -20,14 +20,14 @@ namespace bakery_management_system.Services
                         string query = @"SELECT SUM(c.quantity * p.price) 
                                          FROM Cart c 
                                          JOIN Products p ON c.product_id = p.product_id 
-                                         WHERE c.employee_id = @employeeId AND c.cart_id = @cartId AND c.is_paid = 0";
+                                         WHERE c.employee_id = @employeeId AND c.cart_id = @cartId AND c.is_paid = false";
                         decimal totalAmount = 0m;
 
                         using (var cmd = new NpgsqlCommand(query, connection, transaction)) // Use NpgsqlCommand
                         {
                             cmd.Parameters.AddWithValue("@employeeId", employeeId);
                             cmd.Parameters.AddWithValue("@cartId", cartId);
-                            totalAmount = Convert.ToDecimal(cmd.ExecuteScalar() ?? 0);
+                            totalAmount = Convert.ToDecimal(cmd.ExecuteScalar() ?? false);
                         }
 
                         if (totalAmount <= 0)
@@ -66,7 +66,7 @@ namespace bakery_management_system.Services
                                   SELECT @invoiceId, c.product_id, c.quantity, p.price 
                                   FROM Cart c 
                                   JOIN Products p ON c.product_id = p.product_id 
-                                  WHERE c.employee_id = @employeeId AND c.cart_id = @cartId AND c.is_paid = 0";
+                                  WHERE c.employee_id = @employeeId AND c.cart_id = @cartId AND c.is_paid = false";
                         using (var cmd = new NpgsqlCommand(query, connection, transaction))
                         {
                             cmd.Parameters.AddWithValue("@invoiceId", invoiceId);
@@ -76,7 +76,7 @@ namespace bakery_management_system.Services
                         }
 
                         // Step 5: Mark the specified cart items as paid
-                        query = "UPDATE Cart SET is_paid = 1 WHERE employee_id = @employeeId AND cart_id = @cartId AND is_paid = 0";
+                        query = "UPDATE Cart SET is_paid = true WHERE employee_id = @employeeId AND cart_id = @cartId AND is_paid = false";
                         using (var cmd = new NpgsqlCommand(query, connection, transaction))
                         {
                             cmd.Parameters.AddWithValue("@employeeId", employeeId);

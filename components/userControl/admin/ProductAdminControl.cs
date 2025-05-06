@@ -20,12 +20,20 @@ namespace bakery_management_system.components.userControl.admin
             InitializeComponent();
             _cartController = new CartController();
             _productController = new ProductController(); // Initialize the ProductController
+
+
         }
 
         public void SetProduct(Product product)
         {
             _product = product;
             lblProductName.Text = product.Name;
+
+            // Ensure label supports word wrap
+            lblProductName.AutoSize = false;
+            lblProductName.TextAlign = ContentAlignment.MiddleCenter;
+            lblProductName.Dock = DockStyle.Top; // Optional: depends on your layout
+            lblProductName.MaximumSize = new Size(0, 0); // Allow wrapping
 
             if (product != null)
             {

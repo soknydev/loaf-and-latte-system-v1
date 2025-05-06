@@ -276,10 +276,10 @@
             // 
             // pbLogo
             // 
-            pbLogo.Image = Properties.Resources.bms;
-            pbLogo.Location = new Point(19, 4);
+            pbLogo.Image = Properties.Resources.ChatGPT_Image_May_1__2025__04_48_15_PM;
+            pbLogo.Location = new Point(35, -5);
             pbLogo.Name = "pbLogo";
-            pbLogo.Size = new Size(109, 109);
+            pbLogo.Size = new Size(140, 134);
             pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pbLogo.TabIndex = 0;
             pbLogo.TabStop = false;
@@ -496,6 +496,7 @@
             Controls.Add(tableLayoutPanel1);
             Name = "DashboardAdminForm";
             Text = "DashboardAdminForm";
+            Load += DashboardAdminForm_Load;
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel2.ResumeLayout(false);
             panel2.ResumeLayout(false);

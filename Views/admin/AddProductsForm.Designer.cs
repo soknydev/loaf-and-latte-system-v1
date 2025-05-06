@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddProductsForm));
-            btnSave = new components.ButtonComponent1();
+            btnSave = new bakery_management_system.components.ButtonComponent1();
             picProductImage = new PictureBox();
             btnUpload = new Button();
             label9 = new Label();
@@ -45,7 +45,7 @@
             label1 = new Label();
             cmbCategories = new ComboBox();
             pictureBox1 = new PictureBox();
-            btnClose = new components.ButtonComponent2();
+            btnClose = new bakery_management_system.components.ButtonComponent2();
             ((System.ComponentModel.ISupportInitialize)picProductImage).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -73,7 +73,7 @@
             // 
             // picProductImage
             // 
-            picProductImage.Image = Properties.Resources.bms;
+            picProductImage.Image = Properties.Resources.bun_8447394_640;
             picProductImage.Location = new Point(1467, 295);
             picProductImage.Name = "picProductImage";
             picProductImage.Size = new Size(178, 180);

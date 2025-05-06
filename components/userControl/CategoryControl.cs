@@ -1,4 +1,6 @@
-﻿using bakery_management_system.Controllers;
+﻿using bakery_management_system.components.userControl.admin;
+using bakery_management_system.Controllers;
+using bakery_management_system.Views.admin;
 
 namespace bakery_management_system.components.userControl
 {
@@ -26,7 +28,7 @@ namespace bakery_management_system.components.userControl
             // Add product controls dynamically
             foreach (var product in products)
             {
-                var productControl = new ProductControl();
+                var productControl = new ProductAdminControl();
                 productControl.SetProduct(product); // Set product details dynamically
                 flowLayoutPanelProducts.Controls.Add(productControl);
             }

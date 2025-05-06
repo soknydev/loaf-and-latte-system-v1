@@ -34,7 +34,7 @@ namespace bakery_management_system.Views
         {
             // Default phone if no input is provided
             string customerPhone = string.IsNullOrWhiteSpace(txtCustomerPhone.Text)
-                                   ? "000-000-0000"
+                                   ? "0000000000"
                                    : txtCustomerPhone.Text.Trim();
 
             // Fetch customer using phone (or default)

@@ -157,5 +157,10 @@ namespace bakery_management_system.Views.admin
         {
 
         }
+
+        private void DashboardAdminForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

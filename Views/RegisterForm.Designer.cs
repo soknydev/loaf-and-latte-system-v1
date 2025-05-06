@@ -174,10 +174,10 @@
             // 
             // pictureBox
             // 
-            pictureBox.Image = Properties.Resources.bms;
+            pictureBox.Image = Properties.Resources.ssss1;
             pictureBox.Location = new Point(1233, 419);
             pictureBox.Name = "pictureBox";
-            pictureBox.Size = new Size(178, 180);
+            pictureBox.Size = new Size(178, 225);
             pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox.TabIndex = 19;
             pictureBox.TabStop = false;
@@ -318,10 +318,10 @@
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.Mobile_login;
+            pictureBox1.Image = Properties.Resources.ChatGPT_Image_May_1__2025__04_48_15_PM;
             pictureBox1.Location = new Point(22, 162);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(442, 445);
+            pictureBox1.Size = new Size(482, 445);
             pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
